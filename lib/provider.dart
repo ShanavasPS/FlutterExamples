@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -31,7 +32,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Provider Example',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const HomePage(),
     );
@@ -48,23 +48,9 @@ class HomePage extends StatelessWidget {
       builder: (context, counterProvider, child) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('Counter App'),
+            title: const Text('Provider'),
           ),
-          body: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text(
-                  'Count:',
-                  style: TextStyle(fontSize: 24),
-                ),
-                Text(
-                  '${counterProvider.count}',
-                  style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-          ),
+          body: const MyCenterWidget(),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
               // Step 4: Trigger state update
@@ -74,6 +60,48 @@ class HomePage extends StatelessWidget {
           ),
         );
       },
+    );
+  }
+}
+
+class MyCenterWidget extends StatelessWidget {
+  const MyCenterWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    if (kDebugMode) {
+      print('rebuild MyCenterWidget');
+    }
+    return const Center(
+      child: CounterWidget(),
+    );
+  }
+}
+
+class CounterWidget extends StatelessWidget {
+  const CounterWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    if (kDebugMode) {
+      print('rebuild CounterWidget');
+    }
+    return Consumer<CounterProvider>(
+        builder: (context, counterProvider, child) {
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                'Count:',
+                style: TextStyle(fontSize: 24),
+              ),
+              Text(
+                '${counterProvider.count}',
+                style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+              ),
+            ],
+          );
+        }
     );
   }
 }

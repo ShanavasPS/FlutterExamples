@@ -55,7 +55,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Provider Example',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const HomePage(),
     );
@@ -72,7 +71,7 @@ class HomePage extends StatelessWidget {
       builder: (context, counterProvider, timerProvider, child) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('Counter App'),
+            title: const Text('Multiple Providers'),
           ),
           body: Center(
             child: Column(

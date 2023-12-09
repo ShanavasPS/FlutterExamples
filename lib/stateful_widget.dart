@@ -40,6 +40,9 @@ class MyHomePageState extends State<MyHomePage> {
     }
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Stateful Widget'),
+      ),
       body: MyCenterWidget(counter: _counter),
       floatingActionButton: FloatingActionButton(
         onPressed: increment,
@@ -76,8 +79,18 @@ class CounterWidget extends StatelessWidget {
       print('rebuild CounterWidget');
     }
 
-    return Text(
-        '$counter'
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Text(
+          'Count:',
+          style: TextStyle(fontSize: 24),
+        ),
+        Text(
+          '$counter',
+          style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+        ),
+      ],
     );
   }
 }

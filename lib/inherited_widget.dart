@@ -60,6 +60,9 @@ class MyHomePageState extends State<MyHomePage> {
     }
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Inherited Widget'),
+      ),
       body: CounterInheritedWidget(
           counter: _counter,
           increment: increment,
@@ -100,8 +103,18 @@ class CounterWidget extends StatelessWidget {
       print('rebuild CounterWidget');
     }
     final myInheritedWidget = CounterInheritedWidget.of(context);
-    return Text(
-          '${myInheritedWidget?.counter}'
-        );
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Text(
+          'Count:',
+          style: TextStyle(fontSize: 24),
+        ),
+        Text(
+          '${myInheritedWidget?.counter}',
+          style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+        ),
+      ],
+    );
   }
 }
