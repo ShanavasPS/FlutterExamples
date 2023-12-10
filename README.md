@@ -21,3 +21,5 @@ Add a new configuration with one of the files listed below as entrypoint if you 
                             Make sure to install the provider package as in the previous example.
 6. local_key.dart - This example shows the benefits of using a local key, (Value Key) to make sure states are updated for Stateful widgets when it is updated from another Widget.
                     This is also useful to maintain state when a widget is moved inside a list of widgets.
+7. global_key.dart - The global key can be used to access a state of another widget from anywhere in the widget tree.
+                     When assigned to a Form, one can access the FormStates public functions and variables and use them accordingly.
