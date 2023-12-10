@@ -19,3 +19,5 @@ Add a new configuration with one of the files listed below as entrypoint if you 
 5. multiple_providers.dart - This example shows how to use multiple Providers and how to consume multiple providers.
                              Similar advantages as the previous example.
                             Make sure to install the provider package as in the previous example.
+6. local_key.dart - This example shows the benefits of using a local key, (Value Key) to make sure states are updated for Stateful widgets when it is updated from another Widget.
+                    This is also useful to maintain state when a widget is moved inside a list of widgets.
