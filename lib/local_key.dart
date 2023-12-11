@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
       const MaterialApp(
+        // to hide debug banner
+          debugShowCheckedModeBanner: false,
           home: MyHomePage()
       )
   );

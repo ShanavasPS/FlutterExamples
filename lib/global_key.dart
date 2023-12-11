@@ -10,6 +10,8 @@ class MyApp extends StatelessWidget {
     const appTitle = 'Form Validation Demo';
 
     return MaterialApp(
+      // to hide debug banner
+      debugShowCheckedModeBanner: false,
       title: appTitle,
       home: Scaffold(
         appBar: AppBar(
