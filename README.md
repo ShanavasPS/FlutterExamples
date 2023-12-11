@@ -23,3 +23,6 @@ Add a new configuration with one of the files listed below as entrypoint if you 
                     This is also useful to maintain state when a widget is moved inside a list of widgets.
 7. global_key.dart - The global key can be used to access a state of another widget from anywhere in the widget tree.
                      When assigned to a Form, one can access the FormStates public functions and variables and use them accordingly.
+8. future_builder.dart - FutureBuilder is a Widget that will help you to execute some asynchronous function and based on that function’s result your UI will update.
+                         This helps you to remove some boilerplate code that you need to do otherwise.
+                         For eg; Need of using flag to differentiate status, using SetState when data is updated.
