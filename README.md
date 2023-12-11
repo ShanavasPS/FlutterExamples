@@ -26,3 +26,4 @@ Add a new configuration with one of the files listed below as entrypoint if you 
 8. future_builder.dart - FutureBuilder is a Widget that will help you to execute some asynchronous function and based on that function’s result your UI will update.
                          This helps you to remove some boilerplate code that you need to do otherwise.
                          For eg; Need of using flag to differentiate status, using SetState when data is updated.
+9. page_view.dart - The PageView widget allows the user to transition between different screens in their flutter application
