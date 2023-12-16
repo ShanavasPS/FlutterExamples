@@ -16,16 +16,18 @@ Add a new configuration with one of the files listed below as entrypoint if you 
                    Also no need to use InitState and SetState methods for state update.
                    This needs the Provider package and make sure it is already added to your project using the command 
                    ```flutter pub add provider```
-5. multiple_providers.dart - This example shows how to use multiple Providers and how to consume multiple providers.
+5. provider2.dart - Similar example as above, but uses context.watch<T> and context.read<T> instead of Consumer.
+6. multiple_providers.dart - This example shows how to use multiple Providers and how to consume multiple providers.
                              Similar advantages as the previous example.
                             Make sure to install the provider package as in the previous example.
-6. local_key.dart - This example shows the benefits of using a local key, (Value Key) to make sure states are updated for Stateful widgets when it is updated from another Widget.
+7. multiple_providers2.dart - Similar example as above, but uses context.watch<T> and context.read<T> instead of Consumer.
+8. local_key.dart - This example shows the benefits of using a local key, (Value Key) to make sure states are updated for Stateful widgets when it is updated from another Widget.
                     This is also useful to maintain state when a widget is moved inside a list of widgets.
-7. global_key.dart - The global key can be used to access a state of another widget from anywhere in the widget tree.
+9. global_key.dart - The global key can be used to access a state of another widget from anywhere in the widget tree.
                      When assigned to a Form, one can access the FormStates public functions and variables and use them accordingly.
-8. future_builder.dart - FutureBuilder is a Widget that will help you to execute some asynchronous function and based on that function’s result your UI will update.
+10. future_builder.dart - FutureBuilder is a Widget that will help you to execute some asynchronous function and based on that function’s result your UI will update.
                          This helps you to remove some boilerplate code that you need to do otherwise.
                          For eg; Need of using flag to differentiate status, using SetState when data is updated.
-9. page_view.dart - The PageView widget allows the user to transition between different screens in their flutter application.
-10. page_controller.dart - A page controller lets you manipulate which page is visible in a PageView. 
+11. page_view.dart - The PageView widget allows the user to transition between different screens in their flutter application.
+12. page_controller.dart - A page controller lets you manipulate which page is visible in a PageView. 
                            It also lets you use functions including jumpToPage, animateToPage, nextPage, previousPage, etc.
